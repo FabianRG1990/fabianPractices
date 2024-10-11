@@ -4,3 +4,4 @@
 
 export * from './lib/comuncacion-entre-com.service';
 export * from './lib/comuncacion-entre-com.component';
+
