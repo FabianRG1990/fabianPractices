@@ -7,10 +7,10 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'npx nx run fabian-practices:serve',
-        production: 'npx nx run fabian-practices:serve-static',
+        default: 'npx nx run org:serve',
+        production: 'npx nx run org:serve-static',
       },
-      ciWebServerCommand: 'npx nx run fabian-practices:serve-static',
+      ciWebServerCommand: 'npx nx run org:serve-static',
       ciBaseUrl: 'http://localhost:4200',
     }),
     baseUrl: 'http://localhost:4200',

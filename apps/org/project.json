@@ -1,34 +1,29 @@
 {
-  "name": "fabian-practices",
+  "name": "org",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/fabian-practices/src",
+  "sourceRoot": "apps/org/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/fabian-practices",
-        "index": "apps/fabian-practices/src/index.html",
-        "browser": "apps/fabian-practices/src/main.ts",
+        "outputPath": "dist/apps/org",
+        "index": "apps/org/src/index.html",
+        "browser": "apps/org/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/fabian-practices/tsconfig.app.json",
+        "tsConfig": "apps/org/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/fabian-practices/public"
+            "input": "apps/org/public"
           }
         ],
-        "styles": ["apps/fabian-practices/src/styles.scss"],
-        "scripts": [],
-        "server": "apps/fabian-practices/src/main.server.ts",
-        "prerender": true,
-        "ssr": {
-          "entry": "apps/fabian-practices/server.ts"
-        }
+        "styles": ["apps/org/src/styles.scss"],
+        "scripts": []
       },
       "configurations": {
         "production": {
@@ -58,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "fabian-practices:build:production"
+          "buildTarget": "org:build:production"
         },
         "development": {
-          "buildTarget": "fabian-practices:build:development"
+          "buildTarget": "org:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "fabian-practices:build"
+        "buildTarget": "org:build"
       }
     },
     "lint": {
@@ -79,15 +74,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/fabian-practices/jest.config.ts"
+        "jestConfig": "apps/org/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "fabian-practices:build",
+        "buildTarget": "org:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/fabian-practices/browser",
+        "staticFilePath": "dist/apps/org/browser",
         "spa": true
       }
     }
