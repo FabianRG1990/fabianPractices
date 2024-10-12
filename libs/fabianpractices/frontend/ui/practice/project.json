@@ -1,0 +1,44 @@
+{
+  "name": "practice",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/fabianpractices/frontend/ui/practice/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "libs/fabianpractices/frontend/ui/practice/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/fabianpractices/frontend/ui/practice/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/fabianpractices/frontend/ui/practice/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "libs/fabianpractices/frontend/ui/practice/tsconfig.spec.json",
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@angular-eslint/builder:lint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/fabianpractices/frontend/ui/practice/**/*.ts",
+          "libs/fabianpractices/frontend/ui/practice/**/*.html"
+        ],
+        "eslintConfig": "libs/fabianpractices/frontend/ui/practice/eslint.config.js"
+      }
+    }
+  }
+}
