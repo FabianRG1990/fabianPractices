@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PadreOComponent } from './padreOuput.component';
+import { PadreOComponent } from './padreOutput.component';
 
 describe('PadreOComponent', () => {
   let component: PadreOComponent;
