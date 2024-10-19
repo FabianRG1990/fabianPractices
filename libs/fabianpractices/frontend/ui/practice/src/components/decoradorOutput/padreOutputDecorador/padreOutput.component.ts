@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { HijoOComponent } from '../hijoOutputDecorador/hijoOutput.component';
 
 @Component({
   standalone: true,
@@ -7,7 +8,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './padreOutput.component.html',
   styleUrl: './padreOutput.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [HijoOComponent], //* Importar el hijo
 })
-export class PadreOComponent {}
+export class PadreOComponent {
+
+  mensajeRecibido: string = ''; //* Propiedad para guardar el mensaje recibido
+
+  recibirMensaje(mensaje: string) {
+    this.mensajeRecibido = mensaje; //* guarda msj recibido
+  }
+}
 
 
