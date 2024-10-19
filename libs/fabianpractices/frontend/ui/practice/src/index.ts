@@ -5,6 +5,6 @@
 export * from './lib/practice.service';
 export * from './lib/practice.component';
 
-export * from './components/padreConDecorador/padre.component';
+export * from './components/decoradorInput/padreConDecorador/padre.component';
 
-export * from './components/hijoConDecorador/hijo.component';
+export * from './components/decoradorInput/hijoConDecorador/hijo.component';

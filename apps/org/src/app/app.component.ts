@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PadreComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/padreConDecorador/padre.component';
-import { HijoComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/hijoConDecorador/hijo.component';
+import { PadreComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/decoradorInput/padreConDecorador/padre.component';
+import { HijoComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/decoradorInput/hijoConDecorador/hijo.component';
 
 @Component({
   standalone: true,
