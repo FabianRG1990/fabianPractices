@@ -1,1 +1,7 @@
 <h1>Padre</h1>
+
+<div>
+  <label>Escribe algo: </label>
+  <input [(ngModel)]="mensajePadre" placeholder="Escribe un mensaje" />  <!-- Enlace bidireccional con ngModel -->
+  <lib-hijo [mensaje]="mensajePadre"></lib-hijo>  <!-- Enviamos el mensaje al hijo -->
+</div>

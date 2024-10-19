@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HijoComponent } from '../hijoConDecorador/hijo.component';
 
 @Component({
   standalone: true,
@@ -7,7 +8,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './padre.component.html',
   styleUrl: './padre.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports:  [FormsModule, HijoComponent],
 })
-export class PadreComponent {}
+export class PadreComponent {
+
+  mensajePadre: string = '';  // Esta propiedad está enlazada con el input
+
+}
 
 

@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,6 +7,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hijo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HijoComponent {}
+export class HijoComponent{
+  @Input() mensaje: string = '';  // Declaramos la propiedad con @Input
+
+}
 
 
