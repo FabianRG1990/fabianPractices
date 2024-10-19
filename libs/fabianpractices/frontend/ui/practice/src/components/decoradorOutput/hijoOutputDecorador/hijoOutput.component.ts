@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,6 +7,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hijoOutput.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HijoOComponent {}
+export class HijoOComponent {
+  @Output() mensajeHijo: EventEmitter<string> = new EventEmitter<string>();  //* Definimos el evento de salida
+
+  emitirMensaje(){
+    this.mensajeHijo.emit('mensaje desde el hijo!');  //* Emitimos el evento con un mensaje
+  }
+}
 
 
