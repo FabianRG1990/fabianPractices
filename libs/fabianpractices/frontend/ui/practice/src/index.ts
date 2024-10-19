@@ -10,3 +10,5 @@ export * from './components/decoradorInput/padreConDecorador/padre.component';
 export * from './components/decoradorInput/hijoConDecorador/hijo.component';
 
 export * from './components/decoradorOuput/padreOuputDecorador/padreOuput.component';
+
+export * from './components/decoradorOuput/hijoOuputDecorador/hijoOuput.component';
