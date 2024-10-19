@@ -8,3 +8,5 @@ export * from './lib/practice.component';
 export * from './components/decoradorInput/padreConDecorador/padre.component';
 
 export * from './components/decoradorInput/hijoConDecorador/hijo.component';
+
+export * from './components/decoradorOuput/padreOuputDecorador/padreOuput.component';
