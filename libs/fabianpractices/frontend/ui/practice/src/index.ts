@@ -13,6 +13,12 @@ export * from './components/decoradorOutput/hijoOutputDecorador/hijoOutput.compo
 
 export * from './components/decoradorOutput/padreOutputDecorador/padreOutput.component';
 
+
+
 export * from './inputOutputSinDecorador/PadreInput/padreInput.component';
 
 export * from './inputOutputSinDecorador/HijoInput/hijoInput.component';
+
+export * from './inputOutputSinDecorador/HijoOutput/hijoOutput.component';
+
+export * from './inputOutputSinDecorador/PadreOutput/padreOutput.component';
