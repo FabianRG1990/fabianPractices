@@ -1,1 +1,8 @@
-<p>padreInputSignal works!</p>
+<h1>Padre</h1>
+<h5>Decorador input con Signal</h5>
+
+<div>
+  <label class="m-3">Escribe algo: </label>
+  <input [(ngModel)]="mensajePadre" placeholder="Escribe un mensaje" />  <!-- Enlace bidireccional con ngModel -->
+  <lib-hijo-input-signal [mensaje]="mensajePadre" />  <!-- Enviamos el mensaje al hijo -->
+</div>

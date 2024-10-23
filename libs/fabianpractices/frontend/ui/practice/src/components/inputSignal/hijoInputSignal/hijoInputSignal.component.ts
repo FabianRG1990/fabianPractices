@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -7,4 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './hijoInputSignal.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HijoInputSignalComponent {}
+export class HijoInputSignalComponent {
+  mensaje = input<string>();
+}
