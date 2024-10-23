@@ -1,3 +1,4 @@
+import { PadreOutputSignalComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/outputSignal/padreOutputSignal/padreOutputSignal.component';
 import { PadreInputSignalComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/inputSignal/padreInputSignal/padreInputSignal.component';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -6,7 +7,7 @@ import { PadreOComponent } from 'libs/fabianpractices/frontend/ui/practice/src/c
 
 @Component({
   standalone: true,
-  imports: [RouterModule, PadreComponent, PadreOComponent,PadreInputSignalComponent ],
+  imports: [RouterModule, PadreComponent, PadreOComponent,PadreInputSignalComponent, PadreOutputSignalComponent ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
