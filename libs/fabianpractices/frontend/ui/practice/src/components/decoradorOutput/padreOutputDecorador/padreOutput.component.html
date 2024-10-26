@@ -1,6 +1,7 @@
-<h1>padre</h1>
+<h1>Padre</h1>
 <h5>Decorador Output</h5>
 
-<p>Mensaje recibido: {{mensajeRecibido}}</p>  <!--* Mostramos el mensaje que viene del hijo -->
-
-<lib-hijo-o (mensajeHijo)="recibirMensaje($event)" />   <!--* Escuchamos el evento del hijo -->
+<div class="contenedor"> <!-- Contenedor flex principal -->
+  <p>Mensaje recibido: {{mensajeRecibido}}</p>
+  <lib-hijo-o (mensajeHijo)="recibirMensaje($event)"></lib-hijo-o>
+</div>

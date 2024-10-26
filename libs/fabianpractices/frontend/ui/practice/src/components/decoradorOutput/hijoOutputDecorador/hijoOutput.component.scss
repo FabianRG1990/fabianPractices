@@ -1,0 +1,22 @@
+.btn-bonito {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4CAF50; /* Color verde */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-bonito:hover {
+  background-color: #45A049; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.btn-bonito:active {
+  background-color: #388E3C; /* Color aún más oscuro al hacer clic */
+  transform: translateY(0); /* El botón vuelve a su lugar */
+}

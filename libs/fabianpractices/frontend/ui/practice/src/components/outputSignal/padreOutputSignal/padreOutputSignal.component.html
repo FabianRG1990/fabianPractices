@@ -1,8 +1,7 @@
 <h1>Padre</h1>
-<h5>Decorador Output con signal </h5>
+<h5>Decorador Output con Signal</h5>
 
-<p>Mensaje recibido: {{mensajeRecibido}}</p>  <!--* Mostramos el mensaje que viene del hijo -->
-
-<lib-hijo-output-signal (mensajeHijo)="recibirMensaje($event)" />
-
-
+<div class="contenedor"> <!-- Contenedor Flex -->
+  <p>Mensaje recibido: {{mensajeRecibido}}</p>
+  <lib-hijo-output-signal (mensajeHijo)="recibirMensaje($event)"></lib-hijo-output-signal>
+</div>

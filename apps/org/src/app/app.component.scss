@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+  margin-left: 1rem; /* Quitar margen para centrar correctamente */
+  margin-right: 1rem;
+  font-family: Arial, sans-serif; /* Opcional: Fuente */
+
+}
