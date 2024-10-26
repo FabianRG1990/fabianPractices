@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output} from '@angular/core';
 
 @Component({
   standalone: true,
@@ -7,5 +7,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './hijoOutputSignal.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HijoOutputSignalComponent {}
+export class HijoOutputSignalComponent {
+mensajeHijo = output<string>();
+
+emitirMensaje() {
+  this.mensajeHijo.emit('mensaje desde el hijo');
+}
+
+}
 

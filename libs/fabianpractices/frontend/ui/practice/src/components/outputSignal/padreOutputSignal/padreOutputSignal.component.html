@@ -1,3 +1,8 @@
-<h1>hola
-  
-</h1>
+<h1>Padre</h1>
+<h5>Decorador Output con signal </h5>
+
+<p>Mensaje recibido: {{mensajeRecibido}}</p>  <!--* Mostramos el mensaje que viene del hijo -->
+
+<lib-hijo-output-signal (mensajeHijo)="recibirMensaje($event)" />
+
+
