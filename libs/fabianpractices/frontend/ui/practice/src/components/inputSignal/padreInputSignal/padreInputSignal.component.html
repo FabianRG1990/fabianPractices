@@ -1,0 +1,10 @@
+<h1>Padre</h1>
+<h5>Decorador input con Signal</h5>
+
+<div class="contenedor"> <!-- Contenedor flex -->
+  <div class="input-container">
+    <label>Escribe algo:</label>
+    <input [(ngModel)]="mensajePadre" placeholder="Escribe un mensaje" />
+  </div>
+  <lib-hijo-input-signal [mensaje]="mensajePadre"></lib-hijo-input-signal>
+</div>

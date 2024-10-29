@@ -1,10 +1,13 @@
+import { PadreOutputSignalComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/outputSignal/padreOutputSignal/padreOutputSignal.component';
+import { PadreInputSignalComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/inputSignal/padreInputSignal/padreInputSignal.component';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { PadreComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/decoradorInput/padreConDecorador/padre.component';
+import { PadreOComponent } from 'libs/fabianpractices/frontend/ui/practice/src/components/decoradorOutput/padreOutputDecorador/padreOutput.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, PadreComponent, PadreOComponent,PadreInputSignalComponent, PadreOutputSignalComponent ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

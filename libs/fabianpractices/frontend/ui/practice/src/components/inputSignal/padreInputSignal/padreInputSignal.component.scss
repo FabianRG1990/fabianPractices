@@ -1,0 +1,28 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea elementos al inicio */
+  gap: 1rem; /* Espacio entre los elementos */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre label y input */
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1; /* Input toma el resto del espacio */
+}
+
