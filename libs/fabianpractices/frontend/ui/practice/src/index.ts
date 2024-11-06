@@ -20,3 +20,5 @@ export * from './components/inputSignal/hijoInputSignal/hijoInputSignal.componen
 export * from './components/outputSignal/hijoOutputSignal/hijoOutputSignal.component';
 
 export * from './components/outputSignal/padreOutputSignal/padreOutputSignal.component';
+
+export * from './shared/components/service.component';
