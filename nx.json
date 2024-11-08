@@ -2,13 +2,14 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
   "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "serve"]
-      }
+  "default": {
+    "runner": "nx/tasks-runners/default",
+    "options": {
+      "cacheableOperations": ["build", "lint", "test", "serve"]
     }
-  },
+  }
+},
+
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -26,7 +27,6 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "6723345b00cb764d73bd5e50",
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": true,
