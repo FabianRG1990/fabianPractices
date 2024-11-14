@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 permissions:
@@ -14,25 +14,21 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      # 1. Clonar el repositorio con todas las ramas
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main # Asegura que la rama master (main en algunos repositorios) se descargue
 
-      # This enables task distribution via Nx Cloud
-      # Run this command as early as possible, before dependencies are installed
-      # Learn more at https://nx.dev/ci/reference/nx-cloud-cli#npx-nxcloud-startcirun
-      - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
-
-      # Cache node_modules
+      # 2. Configurar Node.js y habilitar la caché de dependencias
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
+      # 3. Instalar dependencias
       - run: npm ci --legacy-peer-deps
-      - uses: nrwl/nx-set-shas@v4
 
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: npx nx-cloud record -- echo Hello World
-      # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: npx nx affected -t lint test build e2e-ci
+      # 4. Ejecutar Nx con una base explícita
+      # Compara los cambios entre la rama principal (master) y el commit actual (HEAD)
+      - run: npx nx affected --base=origin/main --head=HEAD --target=lint --target=test --target=build --target=e2e-ci
